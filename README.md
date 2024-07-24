@@ -43,3 +43,17 @@ in the json, configure as "args": ["192.168.222.22", "-d", "xib_0", "-g", "1", "
 7 run and debug
 
 ![alt text](image-9.png)
+
+8 run with root 
+
+- In the /etc/sudoers add  " <<user_name>>  ALL=(ALL) NOPASSWD: /user/bin/gdb"
+- create a file in the current wrokspace ,  name run_gdb.sh
+
+#!/bin/sh
+
+sudo gdb "$@"
+
+- chmod 777 run_gdb.sh
+- in the launch.json add "miDebuggerPath": "${workspaceFolder}/run_gdb.sh"
+
+![alt text](image-10.png)
