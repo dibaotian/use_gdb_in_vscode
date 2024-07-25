@@ -57,3 +57,9 @@ sudo gdb "$@"
 - in the launch.json add "miDebuggerPath": "${workspaceFolder}/run_gdb.sh"
 
 ![alt text](image-10.png)
+
+FAQ
+
+sudo 需要密码验证，可以在终端中运行#>sudo -v 命令来缓存密码：
+
+输入 #>sudo -v 后，终端会提示用户输入密码，在接下来的 15 分钟内缓存密码。通过这些步骤，应该能够在 VSCode 中以 sudo 权限运行 gdb 进行调试
